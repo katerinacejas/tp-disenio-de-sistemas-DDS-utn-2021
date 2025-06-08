@@ -1,0 +1,55 @@
+<div class="seccionMascota">
+
+    <p class="subtitulo"> Datos sobre la mascota</p><br>
+
+    <label for="mascotas" class="inline-label"> Mascota </label>
+    <input list = "mascotas" name = "mascota" id = "mascota" required>
+    <datalist id = "mascotas">
+        <option value = "Gato"></option>
+        <option value = "Perro"></option>
+    </datalist>
+
+    <label for="tamanios" class="inline-label"> Tamaño </label>
+    <input list = "tamanios" name = "tamanio" id = "tamanio" required>
+    <datalist id = "tamanios">
+        <option value = "Grande"></option>
+        <option value = "Mediana"></option>
+        <option value = "Chica"></option>
+    </datalist>
+
+    <label for="foto" class="inline-label"> Añadir foto  </label>
+    <input type="file" class="botonFoto" name="fileupload">
+
+    <br><br>
+
+    <label for="descripcion" class="inline-label"> Descripción de la mascota </label>
+    <textarea name="descripcion"></textarea>
+
+    <style type="text/css"> #map{ width:700px; height: 500px; } </style>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <h3>Seleccione dónde encontró a la mascota</h3><br>
+
+    <!--map div-->
+    <div id="map"></div><br>
+
+    <div class="hidden">
+        <input type="text" id="lat" name="latitud" readonly="yes">
+        <input type="text" id="lng" name="longitud" readonly="yes">
+    </div>
+
+    <script type="text/javascript" src="../js/formularioEstaPerdida/map.js"></script>
+
+    <label for="descripcion" class="inline-label"> Lugar donde fue encontrada </label>
+    <textarea name="desLugar"></textarea>
+
+    <label for="mascotas" class="inline-label"> Indique el radio de cercanía </label>
+    <input name = "radio" id = "radio" type="number">
+
+    <label for="mascotas" class="inline-label"> ID Mascota si lo posee </label>
+    <input name = "id" id = "mascota" type="text" placeholder="No posee ID">
+
+    <!-- esto deberia ir al medio -->
+    <input class="botonAceptar" type="submit" value="Confirmar"><br>
+
+    <br><br>

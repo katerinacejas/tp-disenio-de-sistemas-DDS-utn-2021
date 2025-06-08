@@ -1,0 +1,36 @@
+{{> metadata.hbs ref1="../css/formularioEsMiMascota/formularioEsMiMascota.css" ref2="../css/estilo.css" titulo="Subir Foto Sin Usuario"}}
+
+{{> headerSU.hbs}}
+
+
+
+<div style="display:block" class="contenedor">
+<section class="campos">
+    <form class="formulario" action="/formularioEsMiMascotaSinUsuario" method="post" enctype="multipart/form-data">
+
+        <h1><label for="myfile">Seleccione una foto de su mascota</label></h1>
+         <br><br>
+        <input class="botonAceptarFoto" type="file" id="myfile" name="uploaded_file"/>
+
+
+        <br><br>
+        <br><br>
+        <br><br>
+        <center>
+         <input class="botonAceptarFoto"  type="submit" id="buttonUpload" value="Subir foto" style="padding-top = 200px;" />
+         <center>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+
+    </form>
+    </section>
+</div>
+
+
+{{> footer.hbs}}
+
+    </body>
+
+</html>

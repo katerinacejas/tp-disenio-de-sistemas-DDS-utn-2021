@@ -1,0 +1,56 @@
+<h1 class="titulo" style="text-align:center;">Mascotas Perdidas</h1>
+
+
+<h2>Mascotas Encontradas Por Rescatistas</h2>
+
+<br>
+
+<ul class="card-wrapper">
+
+    {{#each publicacion}}
+
+         {{#if aprobada}}
+
+            <li class="card">
+                <div class="medio"><img src={{pathFotosEnCarrusel}} width="300px" height="200px" alt=''></div>
+                <div class="texto">
+                    <h2><a href="{{ref}}{{id}}">{{formulario.lugarDondeEncontroAMascota}}</a></h2>
+                    <br>
+                    <p>{{descripcion}}</p>
+                </div>
+            </li>
+
+        {{/if}}
+    {{/each}}
+</ul>
+
+<br>
+
+<h2>Mascotas Buscadas</h2>
+
+<br>
+
+<ul class="card-wrapper">
+
+    {{#each publicacion}}
+
+         {{#if duenioLaBusca}}
+
+            <li class="card">
+                <div class="medio"><img src="{{mascota.ruta}}" width="300px" height="200px" alt=''></div>
+                <div class="texto">
+                    <h2>{{mascota.nombreMascota}}</h2>
+                    <br>
+                    <p>{{mascota.descripcionFisica}}</p>
+                    <br>
+                    <p>Edad: {{mascota.edad}}</p>
+                    <p>Apodo: {{mascota.apodo}}</p>
+                </div>
+            </li>
+
+        {{/if}}
+
+    {{/each}}
+</ul>
+
+<br><br><br>

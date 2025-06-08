@@ -1,0 +1,31 @@
+{{> metadata.hbs ref1="../css/aprobarPublicaciones/aprobarPublicaciones.css" ref2="../css/estilo.css" titulo="Ver Publicaciones Intencion De Adoptar"}}
+
+{{> headerVoluntario.hbs}}
+
+<h1 class="titulo">&nbsp;&nbsp;&nbsp;Publicaciones de intención de adoptar pendientes de evaluación</h1>
+<div class="cuerpo">
+    <ul class="card-wrapper">
+{{#each publicacionIntencionDeAdoptar}}
+
+    {{#if aprobada}}
+    {{else}}
+        <li class="card">
+            {{#if formulario.esPerro }}
+                <div class="medio"><img  src="../img/verPublicacionesIntencionDeAdoptar/perro.jpg" width="200px" alt=''></div>
+            {{else}}
+                <div class="medio"><img  src="../img/verPublicacionesIntencionDeAdoptar/gato.png" width="200px"alt=''></div>
+            {{/if}}
+            <div class="texto">
+                <h2><a href="../aprobarPublicacionIntencionDeAdoptar/{{id}}">{{formulario.tipoMascotaInteresada}}</a></h2>
+                <p>{{formulario.tamanioMascotaInteresada}} &nbsp; // &nbsp; {{formulario.sexoMascotaInteresada}}</p>
+            </div>
+        </li>
+    {{/if}}
+{{/each}}
+    </ul>
+
+</div>
+
+<br><br><br>
+
+{{> footer.hbs}}

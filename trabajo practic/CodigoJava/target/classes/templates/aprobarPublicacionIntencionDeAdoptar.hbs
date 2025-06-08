@@ -1,0 +1,57 @@
+{{> metadata.hbs ref1="../css/aprobarPublicaciones/aprobarPublicacion.css" ref2="../css/estilo.css" titulo="Aprobar Publicacion Intencion De Adoptar"}}
+
+{{> headerVoluntario.hbs}}
+
+<div class="cuerpo">
+    <div class="cont">
+        <div class="card">
+            {{#if publicacionIntencionDeAdoptar.formulario.esPerro }}
+                <div class="medio"><img  src="../img/verPublicacionesIntencionDeAdoptar/perro.jpg" width="200px" alt=''></div>
+            {{else}}
+                <div class="medio"><img  src="../img/verPublicacionesIntencionDeAdoptar/gato.png" width="200px"alt=''></div>
+            {{/if}}
+            <div class="card-body">
+                <span class="tag tag-teal">{{publicacionIntencionDeAdoptar.formulario.tipoMascotaInteresada}}</span><br>
+                <div class="texto">
+                <br>
+                    <p>{{publicacionIntencionDeAdoptar.formulario.tamanioMascotaInteresada}} &nbsp; // &nbsp; {{publicacionIntencionDeAdoptar.formulario.sexoMascotaInteresada}}</p>
+                </div>
+                 <br>
+                <div class="otroTexto">
+                {{#if publicacionIntencionDeAdoptar.formulario.tienePatio}}
+                    <p>¿Posee Patio?: Si </p>
+                    {{else}}
+                    <p>¿Posee Patio?: No </p>
+                {{/if}}
+                {{#if publicacionIntencionDeAdoptar.formulario.tieneOtrasMascotas}}
+                    <p>¿Posee otras mascotas?: Si </p>
+                    {{else}}
+                    <p>¿Posee otras Mascotas?: No </p>
+                {{/if}}
+                {{#if publicacionIntencionDeAdoptarformulario.tieneTiempo}}
+                    <p>¿Dispone de tiempo suficiente para realizarle paseos?: Si </p>
+                    {{else}}
+                    <p>¿Dispone de tiempo suficiente para realizarle paseos?: No </p>
+                {{/if}}
+                <br>
+                <form class="opciones">
+                    <p class="texto-simple pregunta titulo-inline">Gestión de la Publicación:</p>
+                    <br>
+                    <div class="opciones-inline">
+                        <input type="radio" id="aprobado" name="estado" value="aprobado">
+                        <label class="option" for="APROBADO">Aprobar</label><br>
+                        <input type="radio" id="deasprobado" name="estado" value="desaprobado">
+                        <label class="option" for="DESAPROBADO">Rechazar</label><br>
+                    </div>
+                    <br>
+                    <button type="submit">Gestionar</button>
+                </form>
+                </div>
+             </div>
+         </div>
+    </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br>
+
+{{> footer.hbs}}

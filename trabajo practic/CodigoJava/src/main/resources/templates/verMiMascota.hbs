@@ -1,0 +1,71 @@
+{{> metadata.hbs ref1="../css/misMascotasUsuario/misMascotasUsuario.css" ref2="../css/estilo.css" titulo="Mi Mascota (Usuario)"}}
+
+{{> header.hbs}}
+
+<div class="contenedor">
+
+    <p class="texto">{{mascota.nombreMascota}}
+
+    <div class="imagen">
+        <img src='../{{mascota.ruta}}' class="imagenMascota">
+    </div>
+    <br><br>
+
+    <div class="epigrafe">
+        <h3>{{mascota.apodo}}</h3>
+        <br>
+        <h4>{{mascota.descripcionFisica}}</h4>
+        <br>
+        <h5>Edad: {{mascota.edad}}</h5>
+        <h5>Sexo: {{mascota.sexo}}</h5>
+        <h5>Tamaño: {{mascota.tamanio}}</h5>
+        <h5>Estado de su mascota:
+            {{#if mascota.perdida}}
+                Perdida
+            {{else}}
+                En casa
+            {{/if}}
+        </h5>
+
+        <br>
+
+        {{#if mascota.quererDarlaEnAdopcion}}
+            <h5><i>Su mascota ha sido publicada para ser dada en adopción</i></h5>
+        {{/if}}
+    </div>
+
+    <br>
+
+    <div class="seccionBotones">
+
+    {{#if mascota.quererDarlaEnAdopcion}}
+
+        {{else}}
+
+            <form>
+            <input class="botonAdoptar" name="adopcion" type="submit" id="floated" value="Dar En Adopción">
+        </form>
+
+
+    {{#if mascota.perdida}}
+        {{else}}
+
+        <form>
+            <div class="derecha">
+                <input class="botonVerMenos" name="estado" id="perdida" type="submit" value="Informar Perdida">
+            </div>
+        </form>
+
+    {{/if}}
+    {{/if}}
+
+
+    </div>
+    <br>
+    </p>
+
+</div>
+
+<br><br>
+
+{{> footer.hbs}}

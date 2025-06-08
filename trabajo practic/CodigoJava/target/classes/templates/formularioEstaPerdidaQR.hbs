@@ -1,0 +1,33 @@
+    {{> metadata.hbs ref1="../css/formularioEstaPerdidaSinUsuario/formularioEstaPerdida.css" ref2="../css/estilo.css" titulo="Formulario Esta Perdida (Con QR)"}}
+
+    {{> header.hbs}}
+
+        </header>
+
+            <div class="contenedor" method="post">
+                <section class="campos">
+                    <h3 class="titulo">Complete los siguientes campos</h3>
+                    <form class="formulario" action="">
+
+                        <!-- datos de la mascota -->
+                        <div class="seccionMascota">
+                            <p class="subtitulo"> Datos sobre la mascota</p><br>
+                            <label for="foto" class="inline-label"> Añadir foto: </label>
+                            <input class="botonFoto" type="submit" value="+ Subir Foto">
+                            <label for="descripcion" class="inline-label"> Descripción: </label>
+                            <textarea name="descripcion"></textarea>
+
+                            <!-- esto deberia ir al medio -->
+                            <input class="botonAceptar" type="submit" value="Confirmar">
+
+                            <br><br>
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+    {{> footer.hbs}}
+
+    </body>
+
+</html>

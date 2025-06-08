@@ -1,0 +1,53 @@
+{{> metadata.hbs ref1="../css/respuestas/respuestas.css" ref2="../css/estilo.css" titulo="Gestionar Preguntas"}}
+
+<body>
+
+{{> headerAdminOrganizacion.hbs}}
+
+<h1>Gestionar Preguntas</h1>
+<div class="wrapper">
+    <form>
+        <div class="opciones">
+            <div id="respuesta">
+                <input type="text" name="pregunta" class="respuesta" size="50" placeholder="Pregunta">
+                <br>
+
+            </div>
+            <div class="controls">
+                <a href="#" id="add_more_fields"><i class="fa fa-plus"></i> Agregar</a>
+                <a href="#" id="remove_fields"><i class="fa fa-minus"></i>Quitar</a>
+            </div>
+        </div>
+        <input class="botonAceptar" type="submit" value="Confirmar">
+        <br><br><br>
+
+    </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+<script>
+
+var respuesta = document.getElementById('respuesta');
+var add_more_fields = document.getElementById('add_more_fields');
+var remove_fields = document.getElementById('remove_fields');
+
+add_more_fields.onclick = function(){
+	var newField = document.createElement('input');
+	newField.setAttribute('type','text');
+	newField.setAttribute('name','respuesta');
+	newField.setAttribute('class','respuesta');
+	newField.setAttribute('siz',50);
+	newField.setAttribute('placeholder','Respuesta');
+	respuesta.appendChild(newField);
+}
+
+remove_fields.onclick = function(){
+	var input_tags = respuesta.getElementsByTagName('input');
+	if(input_tags.length > 1) {
+		respuesta.removeChild(input_tags[(input_tags.length) - 1]);
+	}
+}
+</script>
+
+{{> footer.hbs}}

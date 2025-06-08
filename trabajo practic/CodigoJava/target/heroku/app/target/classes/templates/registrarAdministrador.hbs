@@ -1,0 +1,64 @@
+
+    {{> metadata.hbs ref1="../css/registrarUsuario/registrarUsuario.css" ref2="../css/estilo.css" titulo="Registar Administrador"}}
+
+    {{> headerAdmin.hbs}}
+
+        <div class="contenedor">
+            <section class="campos">
+                <h3 class="titulo">Complete los siguientes campos</h3>
+                <form class="formulario" action="">
+
+                    <!-- datos del rescatista -->
+                    <p class="subtitulo">Datos personales</p><br>
+                    <label for="nombre" class="inline-label"> Nombre </label>
+                    <input type="text" name="nombre" required>
+
+                    <label for="nombre" class="inline-label"> Apellido </label>
+                    <input type="text" name="apellido" required>
+
+                    <label for="nombre" class="inline-label"> Nombre de usuario </label>
+                    <input type="text" name="nombreUsuario" required>
+
+                    <label for="nombre" class="inline-label"> Contraseña </label>
+                    <input type="password" name = "contrasenia1" id="Pass" required placeholder="use 8 caracteres o más y una mayúscula">
+
+                    <label for="nombre" class="inline-label"> Confirme su contraseña </label>
+                    <input type="password" name = "contrasenia2" id="Pass" required>
+
+                    <label for="nombre" class="inline-label"> Email </label>
+                    <input type="text" name="email" required>
+                    <label for="fechaDeNacimiento" class="inline-label"> Fecha de nacimiento </label>
+                    <input name = "fechaDeNacimiento" type="date" required>
+
+                    <label for="tipoDocumentos" class="inline-label"> Tipo de documento </label>
+                    <input list = "tipoDocumentos" name = "tipoDocumentacion" id = "tipoDocumento" required>
+                    <datalist id = "tipoDocumentos">
+                        <option value = "DNI"></option>
+                        <option value = "Libreta Cívica"></option>
+                        <option value = "Cédula"></option>
+                        <option value = "Libreta de enrolamiento"></option>
+                    </datalist>
+
+                    <label for="numeroDocumento" class="inline-label"> Número de documento </label>
+                    <input name = "documento" type="text" required>
+
+                    <label for="tramite" class="inline-label"> Número de trámite </label>
+                    <input type="text" name="nTramite" required>
+
+                    <label for="direccion" class="inline-label"> Domicilio </label>
+                    <textarea name="domicilio"></textarea>
+
+                    <br>
+
+                    <input class="botonAceptar" type="submit" value="Confirmar">
+
+                    <br><br>
+                </form>
+            </section>
+        </div>
+
+        {{> footer.hbs}}
+
+    </body>
+
+</html>

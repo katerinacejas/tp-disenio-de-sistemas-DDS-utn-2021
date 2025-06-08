@@ -1,0 +1,46 @@
+    {{> metadata.hbs ref1="../css/organizacionesAdministrador/organizacionesAdministrador.css" ref2="../css/estilo.css" titulo="Organizaciones Administrador"}}
+
+    {{> headerAdmin.hbs}}
+        
+        <h3 class="titulo">Organizaciones</h3>
+
+        {{#each organizacion}}
+        <div class="contenedor">
+            <p class="texto">{{nombre}}</p>
+                <div class="imagen">
+                    <img src={{rutaFoto}}>
+                </div>
+                <div class="epigrafe">
+                    <p class="subtitulo">{{descripcion}}</p>
+                </div>
+                 <div class="epigrafe">
+                   <p class="subtitulo">{{domicilio}}</p>
+                 </div>
+
+            <br>
+            <div class="botones">
+                <a href="../registrarAdministrador/{{id}}">
+                    <input class="botonDetalles" type="submit" value="Agregar nuevo Administrador">
+                </a>
+             </div>
+            </p>
+
+        </div>
+
+
+ <br><br>
+
+        {{/each}}
+          <br><br>
+               <br>
+                 <center>
+                 <a href="..\registrarNuevaOrganizacion">
+                  <input class="nuevaMascota" type="submit" value="Agregar nueva organizacion">
+              </a>
+                  <center>
+                 <br>
+    {{> footer.hbs}}
+
+    </body>
+
+</html>

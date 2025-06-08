@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {  
+    font-family: "Open Sans";
+    background-image:url(../../img/inicioDeSesion/resources/dog.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.contenedor {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    /*margin-right: -50%;*/
+    transform: translate(-50%, -50%);
+    padding: 100px 150px;
+    border: 1px solid rgb(213, 213, 245);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, .85);
+}
+
+.logo {
+    width: 300px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+    display: block;
+}
+
+#Uname,
+#Pass {  
+    width: 300px;  
+    height: 30px;
+    font-size: larger;
+    border: 1px solid grey;    
+    border-radius: 5px;  
+    padding-left: 8px;
+    color: #afadad;
+} 
+
+    #Uname:focus,
+    #Pass:focus {
+        outline: none;
+        border: 2px solid rgb(72, 115, 235);
+        border-radius: 5px;
+    }
+
+#log {
+    font-size: large;  
+    width: 300px;  
+    height: fit-content;  
+    border: none;   
+    float: center;
+    color: white;
+    background-color: #0080f0;
+    font-weight: bolder;
+    text-align: center;  
+}
+
+#registrarse {
+    font-size: large;  
+    width: 300px;  
+    height: fit-content;  
+    border: none;   
+    float: center;
+    color: #303435;
+    background-color: #d6dce0;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.noIniciarSesion {
+    display: inline-block;
+    color: blue;
+    text-decoration: none;
+    width: 300px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.noIniciarSesion a:hover{
+    display: inline-block;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bolder;
+    color: rgb(139, 139, 139);
+}
+
+input[type="button"]:hover {
+    cursor: pointer;
+}
+
+input {
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="Password"] {
+    padding: 20px;
+}
+
+.imagenQR {
+    width: 270px;
+}
+
+.imagenQR img {
+    max-width: 100%;
+}

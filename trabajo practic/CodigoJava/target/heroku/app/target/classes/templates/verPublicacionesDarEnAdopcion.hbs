@@ -1,0 +1,25 @@
+{{> metadata.hbs ref1="../css/aprobarPublicaciones/aprobarPublicaciones.css" ref2="../css/estilo.css" titulo="Ver Publicaciones Dar En Adopcion"}}
+
+{{> headerVoluntario.hbs}}
+
+<h1 class="titulo">&nbsp;&nbsp;&nbsp;Publicaciones de adopción pendientes de evaluación</h1>
+<div class="cuerpo">
+    <ul class="card-wrapper">
+    {{#each publicacionDarEnAdopcion}}
+        {{#if aprobada}}
+        {{else}}
+            <li class="card">
+                <div class="medio"><img src={{mascota.ruta}} width="300px" height="200px" alt='foto mascota'></div>
+                <div class="texto">
+                    <h2><a href="../aprobarPublicacionDarEnAdopcion/{{id}}">{{mascota.nombreMascota}}</a></h2>
+                    <br>
+                    <p>{{mascota.descripcionFisica}}</p>
+                </div>
+            </li>
+         {{/if}}
+    {{/each}}
+    </ul>
+</div>
+
+<br><br><br>
+{{> footer.hbs}}

@@ -1,0 +1,63 @@
+    {{> metadata.hbs ref1="../css/formularioEstaPerdidaSinUsuario/formularioEstaPerdida.css" ref2="../css/estilo.css" titulo="Formulario Esta Perdida (Sin Usuario)"}}
+
+    {{> headerSU.hbs}}
+
+            <div class="contenedor" method="post">
+                <section class="campos">
+                    <h3 class="titulo">Complete los siguientes campos</h3>
+                    <form class="formulario" action="">
+
+                        <!-- datos del rescatista -->
+                        <p class="subtitulo"> Datos personales</p><br>
+
+                        <label for="nombre" class="inline-label"> Nombre </label>
+                        <input type="text" name="nombre" required>
+
+                        <label for="nombre" class="inline-label"> Apellido</label>
+                        <input type="text" name="apellido" required>
+
+                        <label for="fechaDeNacimiento" class="inline-label"> Fecha de nacimiento </label>
+                        <input type="date" required name="nacimiento">
+
+                        <label for="tipoDocumentos" class="inline-label"> Tipo de documento </label>
+                        <input list = "tipoDocumentos" name = "tipoDocumento" id = "tipoDocumento" required>
+                        <datalist id = "tipoDocumentos">
+                            <option value = "DNI"></option>
+                            <option value = "Libreta Cívica"></option>
+                            <option value = "Cédula"></option>
+                            <option value = "Libreta de enrolamiento"></option>
+                        </datalist>
+
+                        <label for="numeroDocumento" class="inline-label"> Número de documento </label>
+                        <input type="text" required name="numeroDoc">
+
+                        <label for="tramite" class="inline-label"> Número de trámite </label>
+                        <input type="text" name="nTramite" required>
+
+                        <!-- datos de contacto -->
+                        <label for="telefono" class="inline-label"> Teléfono </label>
+                        <input type="text" name="telefono" required>
+
+                        <label for="email" class="inline-label"> Email </label>
+                        <input type="text" name="email" required>
+
+                        <label for="formasDeNotificacion" class="inline-label"> Formas de notificación </label>
+                        <input list = "formasDeNotificacion" name = "formaDeNoticacion" id = "formaDeNotificacion" required>
+                        <datalist id = "formasDeNotificacion">
+                            <option value = "Whatsapp"></option>
+                            <option value = "Email"></option>
+                            <option value = "SMS"></option>
+                        </datalist><br>
+
+                        {{> mascotaPerdida.hbs}}
+
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+    {{> footer.hbs}}
+
+    </body>
+
+</html>

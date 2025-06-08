@@ -1,0 +1,134 @@
+.contenedor {
+    margin: auto;
+    width: 50%;
+    align-items: right;
+}
+
+.campos {
+    padding: 60px 50px;
+    padding-top: 0;
+}
+
+    .campos .titulo {
+        font-size: 34px;
+        line-height: 34px;
+        margin-bottom: 60px;
+        font-weight: 700;
+        color: black;
+        text-align: center;
+    }
+
+    .campos .formulario input[type="text"],
+    .campos .formulario input[type="email"],
+    .campos .formulario input[list="mascotas"],
+    .campos .formulario input[list="sexos"],
+    .campos .formulario input[list="tamanios"],
+    .campos .formulario input[list="tieneTiempo"],
+    .campos .formulario input[list="tieneOtrasMascotas"],
+    .campos .formulario input[list="tienePatio"],
+    .campos .formulario input[name="tienePatio"],
+    .campos .formulario .opcionesPregunta,
+    .campos .formulario .botonFoto,
+    .campos .formulario textarea {
+        border: 2px solid #cecece;
+        border-radius: 10px;
+        padding: 15px 20px;
+        font-size: 20px;
+        color: #afadad;
+        font-family: "Open Sans";
+        margin-left: 300px;        
+    }
+
+    .campos .formulario input[type="text"]:focus,
+    .campos .formulario input[type="email"]:focus,
+    .campos .formulario input[list="mascotas"]:focus,
+    .campos .formulario input[list="sexos"]:focus,
+    .campos .formulario input[list="tamanios"]:focus,
+    .campos .formulario input[list="tieneTiempo"]:focus,
+    .campos .formulario input[list="tieneOtrasMascotas"]:focus,
+    .campos .formulario .opcionesPregunta:focus,
+    .campos .formulario input[name="tienePatio"]:focus,
+    .campos .formulario .botonFoto:focus,
+    .campos .formulario .btn-upload:focus,
+    .campos .formulario textarea:focus {
+        border: none;
+        background-color: transparent;
+        resize: none;
+        outline: none;
+        border: 2px solid #319df5;
+    }
+
+label {
+    font-size: 20px;
+    color: black;
+    font-family: "Open Sans";
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.inline-label {
+    max-width: 300px;
+    overflow: hidden;
+    float:left;
+    margin-left: 50px;     
+}
+
+.campos .formulario input[type="text"],
+.campos .formulario input[type="email"],
+.campos .formulario input[list="mascotas"],
+.campos .formulario input[list="tamanios"],
+.campos .formulario input[list="tieneTiempo"],
+.campos .formulario input[list="tieneOtrasMascotas"],
+.campos .formulario input[list="sexos"],
+.campos .formulario input[list="tienePatio"],
+.campos .formulario .opcionesPregunta,
+.campos .formulario input[name="tienePatio"],
+.campos .formulario textarea {
+    width: 49%;
+    margin-bottom: 15px;
+    display: block;
+}
+
+    .campos .formulario textarea {
+        width: 65%;
+        height: 65%;
+        min-width: 65%;
+        margin-bottom: 15px;
+        min-height: 100px;
+        max-height: 200px;
+    }
+
+    .campos .formulario .derecha {
+        float:right;
+    }
+
+    .campos .formulario .botonAceptar {
+        border: 2px solid #cecece;
+        border-radius: 10px;
+        padding: 15px 20px;
+        font-size: 20px;
+        font-family: "Open Sans";
+        margin-left: 10px;
+        margin-right: 10px;
+        float: right;
+        color: white;
+        background-color: #0080f0;
+    }
+
+    .campos .formulario .botonCancelar {
+        border: 2px solid #cecece;
+        border-radius: 10px;
+        padding: 15px 20px;
+        font-size: 20px;
+        font-family: "Open Sans";
+        margin-left: 10px;
+        margin-right: 10px;
+        float: right;
+        color: grey;
+        background-color: white;
+    }
+
+    .campos .formulario .botonAceptar:hover,
+    .campos .formulario .botonCancelar:hover {
+            cursor: pointer;
+    }

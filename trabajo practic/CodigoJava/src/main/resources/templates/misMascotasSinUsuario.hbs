@@ -1,0 +1,33 @@
+    {{> metadata.hbs ref1="../css/misMascotasSinUsuario/misMascotasSinUsuario.css" ref2="../css/estilo.css" titulo="Mis Mascotas sin Usuario"}}
+
+    {{> headerSU.hbs}}
+
+        <div class="contenedor">
+
+            <section class="campos">
+                <h3 class="titulo">Para acceder a sus mascotas, por favor identifíquese</h3>
+                <form class="formulario" action="">
+                    <label for="nombre" class="inline-label"> Número de documento: </label>
+                    <input type="text" name="numeroDoc" required>
+                    <label for="nombre" class="inline-label"> Número de trámite: </label>
+                    <input type="text" name="nTramite" required>
+                    <input class="botonContinuar" type="submit" value="Continuar">
+                </form>
+            </section>
+
+
+
+
+            <br><br><br>
+
+            <p class="texto">¿Ya tienes una cuenta? <a class="link" href="../inicioDeSesion">Inicie Sesión</a></p>
+
+        </div>
+        
+        <br><br><br><br><br><br>
+
+    {{> footer.hbs}}
+
+</body>
+
+</html>

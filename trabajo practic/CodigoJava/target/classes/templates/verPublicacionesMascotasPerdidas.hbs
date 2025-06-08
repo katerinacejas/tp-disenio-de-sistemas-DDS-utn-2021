@@ -1,0 +1,36 @@
+{{> metadata.hbs ref1="../css/aprobarPublicaciones/aprobarPublicaciones.css" ref2="../css/estilo.css" titulo="Ver Publicaciones Mascotas Perdidas"}}
+
+{{> headerVoluntario.hbs}}
+
+<h1 class="titulo">&nbsp;&nbsp;&nbsp;Publicaciones de mascotas perdidas pendientes de evaluación</h1>
+<div class="cuerpo">
+    <ul class="card-wrapper">
+{{#each publicacionMascotasPerdidas}}
+    {{#if aprobada}}
+    {{else}}
+        <li class="card">
+            {{#if encontradaPorRescatista}}
+                <div class="medio"><img src={{pathFotosEnCarrusel}} width="300px" height="200px" alt=''></div>
+                <div class="texto">
+                    <h2><a href="../aprobarPublicacionMascotaPerdida/{{id}}">{{formulario.lugarDondeEncontroAMascota}}</a></h2>
+                    <br>
+                    <p>{{formulario.descripcionMascota}}</p>
+                </div>
+            {{/if}}
+            {{#if duenioLaBusca}}
+                <div class="medio"><img src={{mascota.ruta}}  width="300px" height="200px" alt=''></div>
+                <div class="texto">
+                    <h2><a href="../aprobarPublicacionMascotaPerdida/{{id}}">{{mascota.apodo}}</a></h2>
+                    <br>
+                    <p>{{mascota.descripcionFisica}}</p>
+                </div>
+            {{/if}}
+        </li>
+    {{/if}}
+{{/each}}
+    </ul>
+</div>
+
+<br><br><br>
+
+{{> footer.hbs}}

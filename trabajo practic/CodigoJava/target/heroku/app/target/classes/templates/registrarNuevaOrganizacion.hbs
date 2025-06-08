@@ -1,0 +1,39 @@
+
+    {{> metadata.hbs ref1="../css/registrarUsuario/registrarUsuario.css" ref2="../css/estilo.css" titulo="RegistarNuevaOrganizacion"}}
+
+    {{> headerAdmin.hbs}}
+
+        <div class="contenedor">
+            <section class="campos">
+                <h3 class="titulo">Complete los siguientes campos</h3>
+                <form class="formulario" action="">
+
+                    <!-- datos del rescatista -->
+                    <p class="subtitulo">Datos de la Organizacion</p><br>
+
+                    <label for="nombre" class="inline-label"> Nombre </label>
+                    <input type="text" name="nombre" required>
+
+                     <label for="direccion" class="inline-label"> Domicilio </label>
+                    <textarea name="domicilio"></textarea>
+
+                    <label for="direccion" class="inline-label"> Descripcion </label>
+                                        <textarea name="descripcion"></textarea>
+
+                    <label for="foto" class="inline-label"> Añadir foto  </label>
+                            <input type="file" class="botonFoto" name="foto">
+                    <br>
+
+                    <input class="botonAceptar" type="submit" value="Confirmar">
+
+                    <br><br>
+                </form>
+            </section>
+        </div>
+
+        {{> footer.hbs}}
+
+    </body>
+
+</html>
+

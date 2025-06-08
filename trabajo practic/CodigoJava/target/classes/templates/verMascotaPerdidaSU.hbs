@@ -1,0 +1,50 @@
+{{> metadata.hbs ref1="../css/aprobarPublicaciones/aprobarPublicacion.css" ref2="../css/estilo.css" titulo="Mascota Perdida (Sin Usuario)"}}
+
+{{> headerSU.hbs}}
+
+<div class="cuerpo">
+
+    <div class="cont">
+
+        <div class="card">
+
+            <div class="card-header">
+                <img src="{{publicacion.pathFotosEnCarrusel}}" alt="la imagen no se puedo cargar" />
+            </div>
+
+            <div class="card-body">
+                <span class="tag tag-teal">{{publicacion.formulario.tipoDeMascota}}</span><br>
+                <h4>{{publicacion.formulario.lugarDondeEncontroAMascota}}</h4>
+
+                <br>
+
+                <p>{{publicacion.descripcion}}</p>
+
+                <br>
+
+                <h3>Puede clickear a continuación para ver dónde fue encontrada la mascota</h3>
+
+                <br>
+
+                <a href="http://www.google.com/maps/place/{{publicacion.formulario.latitud}},{{publicacion.formulario.longitud}}">
+                    <img src="../img/hogaresTransito.resources/map.png" width="80px" style="display:block; margin-left:225%;">
+                </a>
+
+                <br>
+
+                    <a href="../mascotasPerdidasSU">
+                    <button type="submit">Volver</button>
+                    </a>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<br><br><br>
+
+{{> footer.hbs}}

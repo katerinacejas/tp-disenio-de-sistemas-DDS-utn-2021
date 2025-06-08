@@ -1,0 +1,66 @@
+    {{> metadata.hbs ref1="../css/formularioEsMiMascota/formularioEsMiMascota.css" ref2="../css/estilo.css" titulo="Formulario Es Mi Mascota"}}
+
+    {{> header.hbs}}
+
+            <div class="contenedor" method="post">
+                <section class="campos">
+                    <h3 class="titulo">Complete los siguientes campos</h3>
+                    <form class="formulario" action="/formularioEsMiMascota">
+
+                        <label for="mascotas" class="inline-label"> Mascota </label>
+                        <input list = "mascotas" name = "mascota" id = "mascota" required>
+                        <datalist id = "mascotas">
+                            <option value = "Gato"></option>
+                            <option value = "Perro"></option>
+                        </datalist>
+
+                        <label for="nombre" class="inline-label"> Nombre de la mascota </label>
+                        <input type="text" name="nombre" required>
+
+                        <label for="apodo" class="inline-label"> Apodo </label>
+                        <input type="text" name="apodo" required>
+
+                        <label for="edad" class="inline-label"> Edad </label>
+                        <input type="text" name="edad" required>
+
+                        <label for="sexo" class="inline-label"> Sexo </label>
+                        <input list = "sexos" name = "sexo" id = "sexo" required>
+                        <datalist id = "sexos">
+                            <option value = "Macho"></option>
+                            <option value = "Hembra"></option>
+                        </datalist>
+
+                        <label for="tamanio" class="inline-label"> Tamaño </label>
+                        <input list = "tamanios" name = "tamanio" id = "tamanio" required>
+                        <datalist id = "tamanios">
+                            <option value = "Chica"></option>
+                            <option value = "Mediana"></option>
+                            <option value = "Grande"></option>
+                        </datalist>
+
+                        <label for="descripcion" class="inline-label"> Descripción física </label>
+                        <textarea name="descripcion"></textarea>
+
+                        <label for="foto" class="inline-label" > Características  </label><br><br><br>
+                        {{#each caracteristicademascotas}}
+                        <ul><input type="checkbox" name="carac" class="derecha"> {{caracteristica}}</ul> <br>
+                        {{/each}}
+                        <br><br>
+
+                         <label for="foto" class="inline-label"> Añadir foto </label>
+                         <input class="botonFoto" type="file" value="Subir Foto">
+
+                        <a href = "../mascotaCargadaExitosamente.hbs" >
+                        <input class="botonAceptar" type="submit" value="Confirmar" />
+                        </a>
+
+                        <br><br>
+                    </form>
+                </section>
+            </div>
+
+    {{> footer.hbs}}
+
+    </body>
+
+</html>

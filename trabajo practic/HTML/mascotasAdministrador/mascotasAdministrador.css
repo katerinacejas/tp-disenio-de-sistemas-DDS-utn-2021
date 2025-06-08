@@ -1,0 +1,73 @@
+    .titulo {
+        font-size: 34px;
+        line-height: 34px;
+        margin-bottom: 60px;
+        font-weight: 700;
+        color: rgb(75, 84, 216);
+        text-align: left;
+        padding-left: 50px
+    }
+
+    .subtitulo {
+        font-size: 25px;
+        line-height: 34px;
+        margin-bottom: 60px;
+        font-weight: 700;
+        color: black;
+        text-align: left;
+        padding-left: 100px
+    }
+
+    .contenedor {
+        background-color: #f2f2f2;
+        margin: auto;
+        width: 50%;
+        align-items: right;
+        border-radius: 3%;
+    }
+
+    ol {
+        list-style-position: inside;
+        padding: 30px 30px;
+    }
+
+    li { 
+        font-size: larger;
+        margin: 8px 8px;
+    }
+
+    .texto {
+        text-align: right;
+    }
+
+    .contenedor .botonAceptar {
+        border: 2px solid #646262;
+        padding: 13px 13px;
+        font-size: 18px;
+        margin-left: 30px;
+        margin-bottom: 10px;
+        color: white;
+        background-color: #646262;
+        border-radius: 10px;
+    }
+
+    .contBoton {
+        position: relative;
+    }
+
+    .botonGuardar{
+        border: 2px solid #868686;
+        padding: 15px 15px;
+        border-radius: 10px;
+        font-size: 23px;
+        margin-left: 300px;
+        margin-bottom: 30px;
+        margin-top:30px;
+        color: #868686;
+        background-color: white;
+    }
+
+    .contenedor .botonAceptar:hover,
+    .botonGuardar:hover {
+        cursor: pointer;
+    }

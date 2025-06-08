@@ -1,0 +1,154 @@
+
+    {{> metadata.hbs ref1="../css/registrarUsuario/registrarUsuario.css" ref2="../css/estilo.css" titulo="Registar Usuario"}}
+
+    {{> headerSU.hbs}}
+
+        <div class="contenedor">
+            <section class="campos">
+                <h3 class="titulo">Complete los siguientes campos</h3>
+                <form class="formulario" action="">
+
+                    <!-- datos del rescatista -->
+                    <p class="subtitulo">Datos personales</p><br>
+                    <label for="nombre" class="inline-label"> Nombre </label>
+                    <input type="text" name="nombre" required>
+
+                    <label for="nombre" class="inline-label"> Apellido </label>
+                    <input type="text" name="apellido" required>
+
+                    <label for="nombre" class="inline-label"> Nombre de usuario </label>
+                    <input type="text" name="nombreUsuario" required>
+
+                    <label for="pass1" class="inline-label"> Contraseña </label>
+                    <input type="password" name = "contrasenia1" id="pass1" required placeholder="use 8 caracteres o más y una mayúscula">
+                    <div id="error1"></div>
+                    <label for="pass2" class="inline-label" > Confirme su contraseña </label>
+                    <input type="password" name = "contrasenia2" id="pass2"  required>
+                    <div id="error2"></div>
+                    <label for="nombre" class="inline-label"> Email </label>
+                    <input type="text" name="email" required>
+                    <label for="fechaDeNacimiento" class="inline-label"> Fecha de nacimiento </label>
+                    <input name = "fechaDeNacimiento" type="date" required>
+
+                    <label for="tipoDocumentos" class="inline-label"> Tipo de documento </label>
+                    <input list = "tipoDocumentos" name = "tipoDocumentacion" id = "tipoDocumento" required>
+                    <datalist id = "tipoDocumentos">
+                        <option value = "DNI"></option>
+                        <option value = "Libreta Cívica"></option>
+                        <option value = "Cédula"></option>
+                        <option value = "Libreta de enrolamiento"></option>
+                    </datalist>
+
+                    <label for="numeroDocumento" class="inline-label"> Número de documento </label>
+                    <input name = "documento" type="text" required>
+
+                    <label for="tramite" class="inline-label"> Número de trámite </label>
+                    <input type="text" name="nTramite" required>
+
+                    <label for="direccion" class="inline-label"> Domicilio </label>
+                    <textarea name="domicilio"></textarea>
+
+                    
+                    <!-- datos de contacto -->
+                    <div class="contacto">
+
+                            <div class="form-holder">
+
+                                <p class="subtitulo">Datos de contacto</p><br>
+                                <label for="nombre" class="inline-label"> Nombre </label>
+                                <input type="text" name="nombreContacto" required>
+                                 <label for="nombre" class="inline-label"> Apellido </label>
+                                <input type="text" name="apellidoContacto" required>
+                                <label for="telefono" class="inline-label"> Telefono </label>
+                                <input type="text" name="telefono" required>
+                                <label for="email" class="inline-label"> Email </label>
+                                <input type="text" name="emailContacto" required>
+                                <label for="formasDeNotificacion" class="inline-label"> Notificar por </label>
+
+                                <br><br><br>
+
+                                 <input type="checkbox" id="formasDeNotificacion1" name="formasDeNotificacion1" value="Whatsapp">
+                                 <label for="formasDeNotificacion1" class="form-control"> Whatsapp</label>
+                                 <input type="checkbox" id="formasDeNotificacion2" name="formasDeNotificacion2" value="Email">
+                                 <label for="formasDeNotificacion2" class="form-control"> Email</label>
+                                 <input type="checkbox" id="formasDeNotificacion3" name="formasDeNotificacion3" value="SMS">
+                                 <label for="formasDeNotificacion3" class="form-control"> SMS</label>
+                                 <br><br>
+
+                            </div>
+
+                            <div class="form-holder-append"></div>
+                                <input class="botonFoto add"  value="+ Añadir un nuevo contacto">
+
+                            <br>
+
+                    </div>
+
+                    <br>
+
+                    <input class="botonAceptar" type="submit" value="Confirmar">
+
+                    <br><br>
+                </form>
+            </section>
+        </div>
+
+        {{> footer.hbs}}
+
+    </body>
+
+</html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+    $
+    // Cloning Form
+  var id_count = 1;
+  $('.add').on('click', function() {
+    var source = $('.form-holder:first'), clone = source.clone();
+    clone.find(':input').attr('id', function(i, val) {
+      return val + id_count;
+    });
+    clone.appendTo('.form-holder-append');
+    id_count++;
+  });
+
+</script>
+
+<script>
+$
+(document).ready(function() {
+
+            	$('#pass2').keyup(function() {
+
+            		var pass1 = $('#pass1').val();
+            		var pass2 = $('#pass2').val();
+
+            		if ( pass1 == pass2 ) {
+            		    $('#error2').text("Las Contraseñas coinciden!").css("color","green");
+            			$('#error2').css("background", "url(CodigoJava/src/main/resources/public/img/registrarUsuario/resources/check.png)");
+            		} else {
+            		    $('#error2').text("Las Contraseñas no coinciden!").css("color","red");
+            			$('#error2').css("background", "url(CodigoJava/src/main/resources/public/img/registrarUsuario/resources/check.png)");
+            		}
+
+            	});
+            	$('#pass1').keyup(function() {
+
+            		var pass1 = $('#pass1').val();
+            		var pass2 = $('#pass2').val();
+
+
+            		if ( pass1 == pass2 ) {
+            		    $('#error2').text("Las Contraseñas coinciden!").css("color","green");
+            			$('#error2').css("background", "url(CodigoJava/src/main/resources/public/img/registrarUsuario/resources/check.png)");
+            		} else {
+            		    $('#error2').text("Las Contraseñas no coinciden!").css("color","red");
+            			$('#error2').css("background", "url(CodigoJava/src/main/resources/public/img/registrarUsuario/resources/check.png)");
+            		}
+
+            	});
+            });
+ </script>

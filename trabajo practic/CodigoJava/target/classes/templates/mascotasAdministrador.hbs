@@ -1,0 +1,27 @@
+    {{> metadata.hbs ref1="../css/mascotasAdministrador/mascotasAdministrador.css" ref2="../css/estilo.css" titulo="Mascotas Administrador"}}
+
+    {{> headerAdmin.hbs}}
+        
+        <h3 class="titulo">Mascotas</h3>
+        <h2 class="subtitulo">Características</h2>
+
+            <div class="contenedor">
+                <ol>
+                    {{#each caracteristicademascotas}}
+                        <li>{{caracteristica}}</li><u></u>
+                    {{/each}}
+                </ol>
+
+                <form>
+                    <textarea name="característica"></textarea>
+                    <input class="botonAceptar" type="submit" value="+ Añadir">
+                </form>
+                <br>
+            </div>
+    <br><br><br>
+
+    {{> footer.hbs}}
+
+    </body>
+
+</html>

@@ -1,0 +1,69 @@
+{{> metadata.hbs ref1="../css/hogaresTransito/hogaresTransito.css" ref2="../css/estilo.css" titulo="Hogares de Tránsito"}}
+
+{{> headerSU.hbs}}
+
+<h3 class="titulo">Hogares de Tránsito</h3>
+
+<section class="publicaciones" id="app">
+
+    <div class="contenedor-base">
+
+        <div class="contenedor-hogares">
+            {{#each hogar}}
+
+                <div class="flip-card">
+
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front box">
+
+                            <p class="card-title">{{nombre}}</p>
+                            <p class="texto-simple">Dirección: {{ubicacion.direccion}}</p>
+                            <br>
+                            <p class="texto-simple">Teléfono: {{telefono}}</p>
+                            <br>
+                            <br>
+
+                            <div class="lugares-disponibles">
+                                <p>{{lugares_disponibles}} lugares disponibles</p>
+                            </div>
+
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Capacidad Total: {{capacidad}}</h1>
+                            <br>
+                            {{#if admisiones.perros}}
+                            <p>Aceptamos Perros</p>
+                            {{/if}}
+                            <br>
+                            {{#if admisiones.gatos}}
+                            <p>Aceptamos Gatos</p>
+                            {{/if}}
+                            {{#if patio}}
+                                <div class="patio">
+                                    <p>Tenemos patio</p>
+                                </div>
+                            {{/if}}
+                            <br>
+                            <ul>
+                                {{# if caracteristicas.length}}
+                                    <p>Aceptamos mascotas que cumplan con las siguientes características: </p>
+                                    {{#each caracteristicas}}
+                                       {{this}}
+                                    {{/each}}
+                                {{/if}}
+                            </ul>
+                            <br>
+                            <a href="http://www.google.com/maps/place/{{ubicacion.lat}},{{ubicacion.longi}}">
+                                <img src="../img/hogaresTransito.resources/map.png" width="65px" style="position:fixed; right:325px; bottom: 10px;">
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+{{> footer.hbs}}
+

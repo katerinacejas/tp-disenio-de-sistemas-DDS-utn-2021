@@ -1,0 +1,38 @@
+{{> metadata.hbs ref1="../css/quererAdoptarConComodidades/quererAdoptarConComodidades.css" ref2="../css/estilo.css" titulo="Querer dar en Adopción"}}
+
+{{> header.hbs}}
+
+<div class="contenedor" method="post">
+    <section class="campos">
+        <form class="formulario" action="quererDarEnAdopcionExito">
+
+            <h3 class="titulo">Responda a las siguientes preguntas</h3>
+
+            {{#each preguntasOpcionales}}
+                {{#if esPreguntaDeRespuestaLibre}}
+                    <label for="tamanio" class="inline-label"> {{pregunta}} </label>
+                    <br>
+                    <textarea name="respuesta"></textarea>
+                {{else}}
+                    <label for="tamanio" class="inline-label"> {{pregunta}} </label>
+                    <br>
+                    <input list = {{pregunta}} name = "tienePatio" id = "tienePatio" >
+                    <datalist id = {{pregunta}}>
+                        {{#each respuesta}}
+                            <option value = {{this}} ></option>
+                        {{/each}}
+                    </datalist>
+                {{/if}}
+            {{/each}}
+
+                <input class="botonAceptar" type="submit" value="Confirmar">
+            <br><br>
+        </form>
+    </section>
+</div>
+
+{{> footer.hbs}}
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+{{> metadata.hbs ref1="../css/aprobarPublicaciones/aprobarPublicacion.css" ref2="../css/estilo.css" titulo="Aprobar Publicacion Mascota Perdida"}}
+
+{{> headerVoluntario.hbs}}
+
+<div class="cuerpo">
+    <div class="cont">
+        <div class="card">
+            <div class="card-header">
+                {{#if publicacionMascotasPerdidas.encontradaPorRescatista}}
+                    <img src="{{publicacionMascotasPerdidas.pathFotosEnCarrusel}}" alt="foto mascota" />
+                {{/if}}
+                {{#if publicacionMascotasPerdidas.duenioLaBusca}}
+                    <img src="../{{publicacionMascotasPerdidas.mascota.ruta}}" alt="foto mascota" />
+                {{/if}}
+            </div>
+            <div class="card-body otroTexto" >
+                {{#if publicacionMascotasPerdidas.encontradaPorRescatista}}
+                      <span class="tag tag-teal">{{publicacionMascotasPerdidas.formulario.tipoDeMascota}}</span>
+                      <h4>{{publicacionMascotasPerdidas.formulario.lugarDondeEncontroAMascota}}</h4>
+                      <p> Descripción: {{publicacionMascotasPerdidas.descripcion}}</p>
+                      <p>Encontrado en las siguientes coordenadas: {{publicacionMascotasPerdidas.formulario.latitud}}, {{publicacionMascotasPerdidas.formulario.longitud}}</p>
+                {{/if}}
+                {{#if publicacionMascotasPerdidas.duenioLaBusca}}
+                    <span class="tag tag-teal">{{publicacionMascotasPerdidas.mascota.tipo}}</span>
+                    <br>
+                    <div class="nombreMascota">
+                        <p><b>Nombre: {{publicacionMascotasPerdidas.mascota.nombreMascota}}</b></p>
+                    </div>
+                    <br>
+                    <p>Descripción: {{publicacionMascotasPerdidas.mascota.descripcionFisica}}</p>
+                    <p>Tamaño: {{publicacionMascotasPerdidas.mascota.tamanio}}</p>
+                    <p>Sexo: {{publicacionMascotasPerdidas.mascota.sexo}}</p>
+                {{/if}}
+                <br>
+
+                <form class="opciones">
+                    <p class="texto-simple pregunta titulo-inline">Gestión de la Publicación:</p>
+                    <br>
+                    <div class="opciones-inline">
+                        <input type="radio" id="aprobado" name="estado" value="aprobado">
+                        <label class="option" for="APROBADO">Aprobar</label><br>
+                        <input type="radio" id="deasprobado" name="estado" value="desaprobado">
+                        <label class="option" for="DESAPROBADO">Rechazar</label><br>
+                    </div>
+                    <br>
+                    <button type="submit">Gestionar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br><br>
+
+{{> footer.hbs}}

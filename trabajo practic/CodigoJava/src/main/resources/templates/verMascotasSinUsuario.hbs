@@ -1,0 +1,35 @@
+    {{> metadata.hbs ref1="../css//misMascotasUsuario/misMascotasUsuario.css" ref2="../css/estilo.css" titulo="Ver Mis Mascotas (Sin Usuario)"}}
+
+    {{> headerSU.hbs}}
+
+   <h3 class="titulo">Mis Mascotas Registradas</h3>
+
+       {{#each mascota}}
+
+           <div class="contenedor">
+
+               <p class="texto">{{nombreMascota}}
+
+                   <div class="imagen">
+                       <img src={{ruta}} class="imagenMascota">
+                   </div>
+
+
+                   <br><br>
+               </p>
+
+           </div>
+           <br><br>
+       {{/each}}
+
+       <br><br>
+
+           <a href="../registrarMascotaSinUsuario">
+               <input class="nuevaMascota" type="submit" value="+ Añadir otra mascota">
+           </a>
+
+    {{> footer.hbs}}
+
+    </body>
+
+</html>

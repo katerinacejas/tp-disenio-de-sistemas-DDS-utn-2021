@@ -1,0 +1,39 @@
+    {{> metadata.hbs ref1="../css/adoptarUnaMascota/adoptarUnaMascota.css" ref2="../css/estilo.css" titulo="Adoptar una Mascota"}}
+
+    {{> header.hbs}}
+
+        <h3 class="titulo">Adopciones</h3>
+
+    {{#each mascota}}
+        <div class="contenedor">
+            {{#if quererDarlaEnAdopcion}}
+                <p class="texto">{{apodo}}
+                    <div class="imagen">
+                        <img src="{{ruta}}" class="imagenMascota">
+                    </div>
+                    <div class="epigrafe">
+                        <p>Edad: {{edad}}</p>
+                        <p>{{descripcionFisica}}</p>
+                    </div>
+                    <div class="seccionBotones">
+                        <div class="derecha">
+                            <a href="../adoptarMascota/{{id}}" style="margin-left: 30px;"><input class="botonAdoptar" type="submit" name="id" value="Adoptar"></a>
+                    </div>
+                        <br>
+                    </div>
+                    <br><br>
+                </p>
+            {{/if}}
+        </div>
+        <br><br>
+    {{/each}}
+
+        <a href="../quererAdoptarConComodidades">
+            <input class="nuevaMascota" type="submit" value="+ Generar interes de adopción">
+        </a>
+
+    {{> footer.hbs}}
+
+    </body>
+
+</html>

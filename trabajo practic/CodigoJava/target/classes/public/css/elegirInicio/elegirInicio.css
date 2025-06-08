@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    margin-top: 100px;
+}
+
+h2 {
+    font-size: 35px;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    margin-top: 60px;
+}
+
+body {
+    font-family: "Open Sans";
+    background-image:url(../../img/elegirInicio/resources/gato.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.contenedor {
+    max-width: 20000px;
+    width: 100%;
+    margin: auto;
+}
+
+.cont .evento .contenedor-opciones {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 80px 300px !important;
+}
+
+.cont .evento .contenedor-opciones .opciones {
+    width: 275px;
+    height: 275px;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+.cont .evento .contenedor-opciones .opciones:hover {
+    margin-bottom: 50px;
+    opacity: 0.7;
+}
+
+.cont .evento .contenedor-opciones .opciones .imagen img {
+    vertical-align: top;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.cont .evento .contenedor-opciones .opciones .titulo {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+}

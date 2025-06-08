@@ -1,0 +1,33 @@
+    {{> metadata.hbs ref1="../css/organizacionesAdministrador/organizacionesAdministrador.css" ref2="../css/estilo.css" titulo="Mi Organizacion"}}
+
+    {{> headerAdminOrganizacion.hbs}}
+        
+        <h3 class="titulo">Organización</h3>
+
+        <div class="contenedor">
+            <p class="texto">{{organizacion.nombre}}</p>
+                <div class="imagen">
+                    <img src={{organizacion.rutaFoto}}>
+                </div>
+                <div class="epigrafe">
+                    <p class="subtitulo">{{organizacion.descripcion}}</p>
+                </div>
+                 <div class="epigrafe">
+                   <p class="subtitulo">{{organizacion.domicilio}}</p>
+                 </div>
+
+
+                </a>
+             </div>
+            </p>
+
+        </div>
+
+
+ <br><br>
+
+    {{> footer.hbs}}
+
+    </body>
+
+</html>

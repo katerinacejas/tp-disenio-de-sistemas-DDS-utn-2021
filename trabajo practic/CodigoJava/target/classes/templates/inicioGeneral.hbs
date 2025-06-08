@@ -1,0 +1,64 @@
+<section class="cont">
+    <section class="evento">
+        <div class="contenedor">
+            <p class="subtitulo">Mascotas Perdidas</p>
+            <div id="slideshow1" class="slideshow-container">
+                {{#each publicacionMascotasPerdidas}}
+                    {{#if aprobada}}
+                        <div class="mySlides fade" id=separador>
+                            {{#if encontradaPorRescatista}}
+                                <img src={{pathFotosEnCarrusel}} style="width:100%">
+                                <div class="text"> BUSCA A SU DUEÑO <br> Descripción: {{descripcion}}</div>
+                            {{/if}}
+                            {{#if duenioLaBusca}}
+                                <img src={{mascota.ruta}} style="width:100%">
+                                <div class="text">Nombre: {{mascota.apodo}} <br> Descripción: {{mascota.descripcionFisica}}</div>
+                            {{/if}}
+                        </div>
+                    {{/if}}
+                {{/each}}
+
+                <a class="prev" onclick="plusSlides(-1,slideshow1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, slideshow1)">&#10095;</a>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1, slideshow1)"></span>
+                    <span class="dot" onclick="currentSlide(2, slideshow1)"></span>
+                    <span class="dot" onclick="currentSlide(3, slideshow1)"></span>
+                </div>
+            </div>
+            <br><br><br>
+
+            <p class="subtitulo">Adopciones</p>
+            <div id="slideshow2" class="slideshow-container">
+
+                {{#each mascota}}
+                    {{#if quererDarlaEnAdopcion}}
+                        <div class="mySlides fade" id=separador>
+                            <img src={{ruta}} style="width:100%">
+                            <div class="text">Nombre: {{apodo}}</div>
+                        </div>
+                    {{/if}}
+                {{/each}}
+
+                <a class="prev" onclick="plusSlides(-1, this.parentNode)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, this.parentNode)">&#10095;</a>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1, slideshow2)"></span>
+                    <span class="dot" onclick="currentSlide(2, slideshow2)"></span>
+                    <span class="dot" onclick="currentSlide(3, slideshow2)"></span>
+                </div>
+            </div>
+            <br><br><br>
+
+        </div>
+    </section>
+</section>
+
+{{> footer.hbs}}
+
+</body>
+
+<script type='text/javascript' src='../js/paginaPrincipal/index.js'></script>
+
+</html>

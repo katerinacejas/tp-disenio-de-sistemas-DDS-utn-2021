@@ -1,0 +1,30 @@
+    {{> metadata.hbs ref1="../css/solicitudesAdministrador/solicitudesAdministrador.css" ref2="../css/estilo.css" titulo="Solicitudes Administrador"}}
+
+    {{> headerAdmin.hbs}}
+
+        <h3 class="titulo">Solicitudes</h3>
+
+        {{#each solicitudesAdministrador}}
+        <div class="seccion">
+            <p class="texto">Nombre y apellido: {{nombre}} {{apellido}}</p>
+            <p class="texto">Email: {{email}}</p>
+            <p class="texto">Domicilio: {{domicilio}}</p>
+            <p class="texto">Fecha de nacimiento: {{nacimiento}}</p>
+            <p class="texto">Tipo de documento: {{tipoDeDocumento}}</p>
+            <p class="texto">Número de documento: {{numeroDocumento}}</p>
+            <p class="texto">Número de trámite: {{numeroTramite}}</p>
+            <p class="texto">Contanos tu experiencia y motivación: {{experiencia}}</p>
+        </div>
+        <div class="seccionBotones">
+            <input class="botonAprobar" type="submit" id="floated" value="Aprobar">
+            <input class="botonRechazar" type="submit" id="floated" value="Rechazar">
+
+        </div>
+        <br><br>
+        {{/each}}
+
+        {{> footer.hbs}}
+
+    </body>
+    
+</html>

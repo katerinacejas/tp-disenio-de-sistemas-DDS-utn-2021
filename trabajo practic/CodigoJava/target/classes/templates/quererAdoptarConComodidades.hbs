@@ -1,0 +1,42 @@
+    {{> metadata.hbs ref1="../css/quererAdoptarConComodidades/quererAdoptarConComodidades.css" ref2="../css/estilo.css" titulo="Querer Adoptar Con Comodidades"}}
+
+    {{> header.hbs}}
+
+            <div class="contenedor" method="post">
+                <section class="campos">
+                    <h3 class="titulo">Complete los siguientes campos con sus preferencias</h3>
+                    <form class="formulario" action="/quererAdoptarConComodidades">
+
+                        <label for="mascotas" class="inline-label"> Mascota </label>
+                        <input list = "mascotas" name = "mascota" id = "mascota" required>
+                        <datalist id = "mascotas">
+                            <option value = "Gato"></option>
+                            <option value = "Perro"></option>
+                        </datalist>
+
+                        <label for="sexo" class="inline-label"> Sexo </label>
+                        <input list = "sexos" name = "sexo" id = "sexo" required>
+                        <datalist id = "sexos">
+                            <option value = "Macho"></option>
+                            <option value = "Hembra"></option>
+                        </datalist>
+
+                        <label for="tamanio" class="inline-label"> Tamaño </label>
+                        <input list = "tamanios" name = "tamanio" id = "tamanio" required>
+                        <datalist id = "tamanios">
+                            <option value = "Chica"></option>
+                            <option value = "Mediana"></option>
+                            <option value = "Grande"></option>
+                        </datalist>
+
+                        <input class="botonAceptar" type="submit" value="Confirmar">
+                        <br><br>
+                    </form>
+                </section>
+            </div>
+
+    {{> footer.hbs}}
+
+    </body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="icon" type="image/png" href="..\resoucesComunes\favicon-32x32.png" sizes="32x32" />
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <link rel="stylesheet" href="index.css"/>
+        <link rel="stylesheet" href="../estilo.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Pagina Principal</title>
+    </head>
+
+    <body>
+        <header>
+
+            <div class="logo">
+                <a href="..\paginaPrincipal\index.html"> <img src="..\resoucesComunes\logo.png"> </a>
+            </div>
+        
+            <div class="inicio">
+                <div class="registro">
+                    <a href="..\seccionRegistrarMascotas\seccionRegistrarMascotas.html"> Registrar Mascota</a>
+                    </div>
+                <div class="sesion">
+                    <a href="#">Mi Perfil</a>
+                </div>
+                <div class="sesion">
+                    <a href="#">Cerrar Sesión</a>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="../misMascotasUsuario/misMascotasUsuario.html">MIS MASCOTAS</a></li>
+                    <li><a href="../adoptarUnaMascota/adoptarUnaMascota.html">ADOPCIONES</a></li>
+                    <li><a href="#">MASCOTAS PERDIDAS</a></li>
+                    <li><a href="#">HOGARES DE TRÁNSITO</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <section class="cont">
+            <section class="evento">
+                <div class="contenedor">
+                    <p class="subtitulo">Mascotas Perdidas</p>
+                    <div id="slideshow1" class="slideshow-container">
+
+                        <div class="mySlides fade" id=separador>
+                          <div class="numbertext">1 / 3</div>
+                          <img src="resources\mascotasPerdidas\slide1.JPG" style="width:100%">
+                          <div class="text">Nombre mascota 1 + descripción</div>
+                        </div>
+                        
+                        <div class="mySlides fade" id=separador>
+                          <div class="numbertext">2 / 3</div>
+                          <img src="resources\mascotasPerdidas\slide2.JPG" style="width:100%">
+                          <div class="text">Nombre mascota 2 + descripción</div>
+                        </div>
+                        
+                        <div class="mySlides fade" id=separador>
+                          <div class="numbertext">3 / 3</div>
+                          <img src="resources\mascotasPerdidas\slide3.JPG" style="width:100%">
+                          <div class="text">Nombre mascota 3 + descripción</div>
+                        </div>
+                        
+                        <a class="prev" onclick="plusSlides(-1,slideshow1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, slideshow1)">&#10095;</a>
+                        
+                        
+                        <div style="text-align:center">
+                          <span class="dot" onclick="currentSlide(1, slideshow1)"></span> 
+                          <span class="dot" onclick="currentSlide(2, slideshow1)"></span> 
+                          <span class="dot" onclick="currentSlide(3, slideshow1)"></span> 
+                        </div>
+                        </div>
+                        <br><br><br>
+            
+                        <p class="subtitulo">Adopciones</p>
+                        <div id="slideshow2" class="slideshow-container">
+                        
+                        <div class="mySlides fade" id=separador>
+                          <div class="numbertext">1 / 3</div>
+                          <img src="resources\adopciones\slide1.JPG" style="width:100%">
+                          <div class="text">Nombre mascota 1</div>
+                        </div>
+                        
+                        <div class="mySlides fade" id=separador>
+                          <div class="numbertext">2 / 3</div>
+                          <img src="resources\adopciones\slide2.JPG" style="width:100%">
+                          <div class="text">Nombre mascota 2</div><br>
+                        </div>
+                        
+                        <div class="mySlides fade" id=separador>
+                          <div class="numbertext">3 / 3</div>
+                          <img src="resources\adopciones\slide3.JPG" style="width:100%">
+                          <div class="text">Nombre mascota 3</div>
+                        </div>
+                        
+                        <a class="prev" onclick="plusSlides(-1, this.parentNode)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, this.parentNode)">&#10095;</a>
+                        
+                        
+                        <div style="text-align:center">
+                          <span class="dot" onclick="currentSlide(1, slideshow2)"></span> 
+                          <span class="dot" onclick="currentSlide(2, slideshow2)"></span> 
+                          <span class="dot" onclick="currentSlide(3, slideshow2)"></span> 
+                        </div>
+                        </div>
+                        <br><br><br>
+            
+                        <p class="subtitulo">Hogares de Tránsito</p>
+                        <div id="slideshow3" class="slideshow-container">
+                        
+                          <div class="mySlides fade" id=separador>
+                            <div class="numbertext">1 / 3</div>
+                            <img src="resources\hogares\slide1.JPG" style="width:100%">
+                            <div class="text">Nombre hogar de tránsito 1 + dirección</div>
+                          </div>
+                          
+                          <div class="mySlides fade" id=separador>
+                            <div class="numbertext">2 / 3</div>
+                            <img src="resources\hogares\slide2.JPG" style="width:100%">
+                            <div class="text">Nombre hogar de tránsito 2 + dirección</div>
+                          </div>
+                          
+                          <div class="mySlides fade" id=separador>
+                            <div class="numbertext">3 / 3</div>
+                            <img src="resources\hogares\slide3.JPG" style="width:100%">
+                            <div class="text">Nombre hogar de tránsito 3 + dirección</div>
+                          </div>
+                          
+                          <a class="prev" onclick="plusSlides(-1, this.parentNode)">&#10094;</a>
+                          <a class="next" onclick="plusSlides(1, this.parentNode)">&#10095;</a>
+                          
+                          
+                          <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1, slideshow3)"></span> 
+                            <span class="dot" onclick="currentSlide(2, slideshow3)"></span> 
+                            <span class="dot" onclick="currentSlide(3, slideshow3)"></span> 
+                          </div>
+                          </div><br><br>
+                </div>
+            </section>
+        </section>
+
+        <footer>	
+            		
+          <section class="redes-sociales">
+              <div class="cont">
+                  <a class="twitter" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                  <a class="facebook" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                  <a class="youtube" href="http://www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+                  <a class="instagram" href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+              </div>
+          </section>
+  
+      </footer>
+
+    </body>
+    <script type='text/javascript' src='index.js'></script>
+</html>

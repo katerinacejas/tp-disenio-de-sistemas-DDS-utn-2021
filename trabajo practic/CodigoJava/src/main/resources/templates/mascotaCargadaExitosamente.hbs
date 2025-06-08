@@ -1,0 +1,28 @@
+   {{> metadata.hbs ref1="../css/inicioDeSesion/mascotaCargadaExitosamente.css" titulo="Carga de Mascota Exitosa"}}
+
+    <body>
+            <div class ="contenedor">
+                <div class="logo">
+                    <img src=../img/inicioDeSesion/resources/logo.png style='height: 100%; width: 100%; object-fit: contain'>
+                </div>
+
+                <h1 style='height: 100%; text-align:center'>Su mascota ha sido cargada en el sistema de forma exitosa</h1>
+                <br>
+                <h3 style='height: 100%; text-align:center; color= blue'>Ya está disponible el código QR para ser descargado</h3>
+
+                <br>
+
+                <a href="{{ruta}}">
+                        <input  type="button" name="log" id="log" value="Volver" style='height: 100%; width: 100%; object-fit: contain'>
+                </a>
+
+                <br><br>
+
+                <div class="imagenQR" >
+                    <img src=data:image/png;base64,{{imagen}} />
+                </div>
+
+            </div>
+    </body>
+
+</html>

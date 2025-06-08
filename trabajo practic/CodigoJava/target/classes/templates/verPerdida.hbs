@@ -1,0 +1,54 @@
+<div class="cuerpo">
+
+    <div class="cont">
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <img src="{{publicacion.pathFotosEnCarrusel}}"  alt="la imagen no se puedo cargar" style="text-align: center;"/>
+
+            </div>
+
+            <div class="card-body">
+                <span class="tag tag-teal">{{publicacion.formulario.tipoDeMascota}}</span><br>
+                <h4>{{publicacion.formulario.lugarDondeEncontroAMascota}}</h4>
+
+                <br>
+
+                <p>{{publicacion.descripcion}}</p>
+
+                <br>
+
+                <h3>Puede clickear a continuación para ver dónde fue encontrada la mascota</h3>
+
+                <br>
+
+                <a href="http://www.google.com/maps/place/{{publicacion.formulario.latitud}},{{publicacion.formulario.longitud}}">
+                    <img src="../img/hogaresTransito.resources/map.png" width="80px" style="display:block; margin-left:225%;">
+                </a>
+
+                <br>
+
+                <form class="opciones">
+                    <p class="texto-simple pregunta titulo-inline">¿Es mi mascota?</p>
+                    <br>
+                    <div class="opciones-inline">
+                        <input type="radio" id="si" name="estado" value="si">
+                        <label class="option" for="si">Sí</label><br>
+                    </div>
+                    <br>
+                    <a href="../mascotasPerdidas">
+                    <button type="submit">Enviar</button>
+                    </a>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<br><br><br>

@@ -1,0 +1,35 @@
+    {{> metadata.hbs ref1="../css/misMascotasSinUsuario/misMascotasSinUsuario.css" ref2="../css/estilo.css" titulo="Registar Mascota (Sin Usuario)"}}
+
+    {{> headerSU.hbs}}
+
+        <div class="contenedor">
+
+            <section class="campos">
+
+                <h3 class="titulo">Complete los siguientes campos para registrar a su mascota</h3>
+
+                <form class="formulario" action="../registrarMascotaSinUsuario">
+
+                    <label for="documento" class="inline-label"> Número de documento: </label>
+                    <input type="text" name="documento" required>
+
+                    <label for="nombre" class="inline-label"> Número de trámite: </label>
+                    <input type="text" name="tramite" required>
+
+                        <input class="botonContinuar" type="submit" value="Continuar">
+
+                </form>
+
+            </section>
+
+            <br><br><br>
+
+        </div>
+        
+        <br><br><br><br><br><br>
+
+    {{> footer.hbs}}
+
+    </body>
+
+</html>

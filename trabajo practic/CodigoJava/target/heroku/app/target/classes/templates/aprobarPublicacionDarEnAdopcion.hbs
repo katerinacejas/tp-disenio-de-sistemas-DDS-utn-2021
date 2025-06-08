@@ -1,0 +1,42 @@
+{{> metadata.hbs ref1="../css/aprobarPublicaciones/aprobarPublicacion.css" ref2="../css/estilo.css" titulo="Aprobar Publicacion"}}
+
+{{> headerVoluntario.hbs}}
+
+<div class="cuerpo">
+    <div class="cont">
+        <div class="card">
+            <div class="card-header">
+                <img src="{{publicacionDarEnAdopcion.mascota.ruta}}" alt="foto mascota" />
+            </div>
+            <div class="card-body">
+                <span class="tag tag-teal">{{publicacionDarEnAdopcion.mascota.tipo}}</span><br>
+                <h2>{{publicacionDarEnAdopcion.mascota.nombreMascota}}</h4>
+                <br>
+                <div class="otroTexto">
+                    <p>Descripción: {{publicacionDarEnAdopcion.mascota.descripcionFisica}}</p>
+                    <p>Tamaño: {{publicacionDarEnAdopcion.mascota.tamanio}}</p>
+                    <p>Sexo: {{publicacionDarEnAdopcion.mascota.sexo}}</p>
+                    <p>Edad: {{publicacionDarEnAdopcion.mascota.edad}}</p>
+                    <!-- TODO: AGREGAR QUE MUESTRE LAS RESPUESTAS DE LAS PREGUNTAS QUE SE LE HIZO
+                                AL QUE LA DA EN ADOPCION, Y LAS CARACTERISTICAS -->
+                </div>
+                <form class="opciones">
+                <br>
+                    <p class="texto-simple pregunta titulo-inline">Gestión de la Publicación:</p>
+                    <br>
+                    <div class="opciones-inline">
+                        <input type="radio" id="aprobado" name="estado" value="aprobado">
+                        <label class="option" for="APROBADO">Aprobar</label><br>
+                        <input type="radio" id="deasprobado" name="estado" value="desaprobado">
+                        <label class="option" for="DESAPROBADO">Rechazar</label><br>
+                    </div>
+                    <br>
+                    <button type="submit">Gestionar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br><br>
+{{> footer.hbs}}
